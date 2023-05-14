@@ -5,9 +5,9 @@
   <artifactId>memoryfilesystem-junit-provider</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   
-  <name>Left Pad</name>
-  <inceptionYear>2022</inceptionYear>
-  <description>A demo project on possible left pad implementations.</description>
+  <name>Memoryfilesystem JUnit Provider</name>
+  <inceptionYear>2023</inceptionYear>
+  <description>A Memoryfilesystem based @TempDir provider for JUnit.</description>
 
   <url>https://github.com/marschall/memoryfilesystem-junit-provider</url>
 
