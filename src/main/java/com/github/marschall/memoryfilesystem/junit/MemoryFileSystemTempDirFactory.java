@@ -19,10 +19,10 @@ import com.github.marschall.memoryfilesystem.MemoryFileSystemBuilder;
  * <pre><code>
  * class SomeTests {
  *
- *   @TempDir(factory = MemoryFileSystemTempDirFactory.class)
+ *   &commat;TempDir(factory = MemoryFileSystemTempDirFactory.class)
  *   Path tempDirectory;
  *
- *   @Test
+ *   &commat;Test
  *   void someTest() {
  *     Path input = Files.createFile(this.tempDirectory.resolve("input.txt"));
  *     // test code

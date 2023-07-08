@@ -19,10 +19,10 @@ import org.junit.jupiter.api.io.TempDirFactory;
  * <pre><code>
  * class SomeTests {
  *
- *   @MemoryTempDir
+ *   &commat;MemoryTempDir
  *   Path tempDirectory;
  *
- *   @Test
+ *   &commat;Test
  *   void someTest() {
  *     Path input = Files.createFile(this.tempDirectory.resolve("input.txt"));
  *     // test code
