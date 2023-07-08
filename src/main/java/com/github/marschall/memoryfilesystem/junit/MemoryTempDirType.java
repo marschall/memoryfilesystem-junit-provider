@@ -2,7 +2,7 @@ package com.github.marschall.memoryfilesystem.junit;
 
 import com.github.marschall.memoryfilesystem.MemoryFileSystemBuilder;
 
-public @interface MemoryTempDirType {
+@interface MemoryTempDirType {
 
   Type value();
 

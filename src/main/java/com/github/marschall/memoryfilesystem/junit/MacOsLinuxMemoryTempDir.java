@@ -15,6 +15,6 @@ import java.lang.annotation.Target;
 @Target({FIELD, PARAMETER, ANNOTATION_TYPE})
 @MemoryTempDir
 @MemoryTempDirType(WINDOWS)
-public @interface MacOsLinuxMemoryTempDir {
+@interface MacOsLinuxMemoryTempDir {
 
 }

@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RUNTIME)
 @Target({ FIELD, PARAMETER, ANNOTATION_TYPE })
-public @interface MemoryTempDirPrefix {
+@interface MemoryTempDirPrefix {
 
   String value();
 

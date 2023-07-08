@@ -14,6 +14,22 @@ import com.github.marschall.memoryfilesystem.MemoryFileSystemBuilder;
 
 /**
  * A {@link TempDirFactory} that creates paths on a memory file system.
+ * 
+ * <h2>Usage</h2>
+ * <pre><code>
+ * class SomeTests {
+ *
+ *   @TempDir(factory = MemoryFileSystemTempDirFactory.class)
+ *   Path tempDirectory;
+ *
+ *   @Test
+ *   void someTest() {
+ *     Path input = Files.createFile(this.tempDirectory.resolve("input.txt"));
+ *     // test code
+ *   }
+ *
+ * }
+ * </code></pre>
  */
 public final class MemoryFileSystemTempDirFactory implements TempDirFactory {
 
@@ -62,7 +78,7 @@ public final class MemoryFileSystemTempDirFactory implements TempDirFactory {
       case MAC_OS:
         return MemoryFileSystemBuilder.newMacOs().build();
       case WINDOWS:
-        return MemoryFileSystemBuilder.newMacOs().build();
+        return MemoryFileSystemBuilder.newWindows().build();
       default:
         throw new IncompatibleClassChangeError("unknown enum value: " + type);
     }
