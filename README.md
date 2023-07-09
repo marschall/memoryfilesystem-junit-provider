@@ -1,10 +1,19 @@
-Memoryfilesystem JUnit Provider
+Memoryfilesystem JUnit Provider [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/memoryfilesystem-junit-provider/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/memoryfilesystem-junit-provider) [![Javadocs](https://www.javadoc.io/badge/com.github.marschall/memoryfilesystem-junit-provider.svg)](https://www.javadoc.io/doc/com.github.marschall/memoryfilesystem-junit-provider)
 ===============================
 
-A memoryfilesystem based @TempDir provider for JUnit 5.10+.
+A memoryfilesystem based `@TempDir` provider for JUnit 5.10+.
 
 Usage
 -----
+
+```xml
+<dependency>
+  <groupId>com.github.marschall</groupId>
+  <artifactId>memoryfilesystem</artifactId>
+  <version>1.0.0</version>
+  <scope>test</scope>
+</dependency>
+```
 
 You can either change individual elements annoated with `@TempDir` to use memoryfilesystem by use of the `factory` annotation value.
 
