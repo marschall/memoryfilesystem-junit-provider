@@ -6,9 +6,9 @@ import java.nio.file.FileSystem;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+import org.junit.jupiter.api.extension.AnnotatedElementContext;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.io.TempDirFactory;
-import org.junit.platform.commons.util.AnnotationUtils;
 
 import com.github.marschall.memoryfilesystem.MemoryFileSystemBuilder;
 
@@ -38,11 +38,10 @@ public final class MemoryFileSystemTempDirFactory implements TempDirFactory {
   public MemoryFileSystemTempDirFactory() {
     super();
   }
-
+  
   @Override
-  public Path createTempDirectory(ExtensionContext context) throws Exception {
-    this.fileSystem = context.getElement()
-            .flatMap(element -> AnnotationUtils.findAnnotation(element, MemoryTempDirType.class))
+  public Path createTempDirectory(AnnotatedElementContext elementContext, ExtensionContext extensionContext) throws Exception {
+    this.fileSystem = elementContext.findAnnotation(MemoryTempDirType.class)
             .map(MemoryTempDirType::value)
             .map(MemoryFileSystemTempDirFactory::buildFileSystemUnChecked)
             .orElseGet(MemoryFileSystemTempDirFactory::buildDefaultFileSystem);
@@ -50,6 +49,7 @@ public final class MemoryFileSystemTempDirFactory implements TempDirFactory {
     Path firstRoot = fileSystem.getRootDirectories().iterator().next();
     return Files.createTempDirectory(firstRoot , "junit");
   }
+
   @Override
   public void close() throws IOException {
     this.fileSystem.close();

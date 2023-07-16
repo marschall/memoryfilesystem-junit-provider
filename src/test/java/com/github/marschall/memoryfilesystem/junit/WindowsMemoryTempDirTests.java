@@ -9,10 +9,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-@Disabled("https://github.com/junit-team/junit5/issues/3390")
 class WindowsMemoryTempDirTests {
 
   @WindowsMemoryTempDir
@@ -29,7 +27,7 @@ class WindowsMemoryTempDirTests {
     List<Path> rootDirectories = toList(fileSystem.getRootDirectories());
     assertEquals(Collections.singletonList(fileSystem.getPath("C:\\")), rootDirectories);
   }
-  
+
   private static <T> List<T> toList(Iterable<T> i) {
     return StreamSupport.stream(i.spliterator(), false).collect(Collectors.toList());
   }
