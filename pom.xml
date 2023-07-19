@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.marschall</groupId>
   <artifactId>memoryfilesystem-junit-provider</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
   
   <name>Memoryfilesystem JUnit Provider</name>
   <inceptionYear>2023</inceptionYear>
@@ -15,7 +15,7 @@
     <connection>scm:git:git@github.com:marschall/memoryfilesystem-junit-provider.git</connection>
     <developerConnection>scm:git:git@github.com:marschall/memoryfilesystem-junit-provider.git</developerConnection>
     <url>${project.url}</url>
-    <tag>HEAD</tag>
+    <tag>1.0.1</tag>
   </scm>
 
   <dependencyManagement>
