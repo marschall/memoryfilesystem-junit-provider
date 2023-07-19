@@ -1,6 +1,6 @@
 package com.github.marschall.memoryfilesystem.junit;
 
-import static com.github.marschall.memoryfilesystem.junit.MemoryTempDirType.Type.WINDOWS;
+import static com.github.marschall.memoryfilesystem.junit.MemoryTempDirType.Type.LINUX;
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.PARAMETER;
@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 @Retention(RUNTIME)
 @Target({FIELD, PARAMETER, ANNOTATION_TYPE})
 @MemoryTempDir
-@MemoryTempDirType(WINDOWS)
+@MemoryTempDirType(LINUX)
 @interface LinuxMemoryTempDir {
 
 }
