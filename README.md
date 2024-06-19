@@ -9,8 +9,8 @@ Usage
 ```xml
 <dependency>
   <groupId>com.github.marschall</groupId>
-  <artifactId>memoryfilesystem</artifactId>
-  <version>1.0.0</version>
+  <artifactId>memoryfilesystem-junit-provider</artifactId>
+  <version>1.0.1</version>
   <scope>test</scope>
 </dependency>
 ```
