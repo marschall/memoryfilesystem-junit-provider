@@ -35,10 +35,13 @@ public final class MemoryFileSystemTempDirFactory implements TempDirFactory {
 
   private FileSystem fileSystem;
 
+  /**
+   * Default constructor invoked by JUnit.
+   */
   public MemoryFileSystemTempDirFactory() {
     super();
   }
-  
+
   @Override
   public Path createTempDirectory(AnnotatedElementContext elementContext, ExtensionContext extensionContext) throws Exception {
     this.fileSystem = elementContext.findAnnotation(MemoryTempDirType.class)
