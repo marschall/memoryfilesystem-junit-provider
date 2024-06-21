@@ -1,7 +1,9 @@
 Memoryfilesystem JUnit Provider [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/memoryfilesystem-junit-provider/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/memoryfilesystem-junit-provider) [![Javadocs](https://www.javadoc.io/badge/com.github.marschall/memoryfilesystem-junit-provider.svg)](https://www.javadoc.io/doc/com.github.marschall/memoryfilesystem-junit-provider)
 ===============================
 
-A memoryfilesystem based `@TempDir` provider for JUnit 5.10+.
+A memoryfilesystem based [@TempDir](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/io/TempDir.html) provider for JUnit 5.10+.
+
+Only `Path` is supported, `File` can not be supported.
 
 Usage
 -----
@@ -54,10 +56,9 @@ class SomeTests {
 Global Configuration
 --------------------
 
+You can also make all elements annoated with `@TempDir` to use memoryfilesystem by use of the [junit.jupiter.tempdir.factory.default](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/io/TempDir.html#DEFAULT_FACTORY_PROPERTY_NAME) configuration property.
 
-You can either change all elements annoated with `@TempDir` to use memoryfilesystem by use of the `junit.jupiter.tempdir.factory.default` configuration property.
-
-```
+```properties
 junit.jupiter.tempdir.factory.default=com.github.marschall.memoryfilesystem.junit.MemoryFileSystemTempDirFactory
 ```
 
