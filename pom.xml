@@ -117,6 +117,7 @@
             <link>https://junit.org/junit5/docs/current/api/</link>
           </links>
           <release>8</release>
+          <notimestamp>true</notimestamp>
         </configuration>
         <executions>
           <execution>
@@ -249,6 +250,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.build.outputTimestamp>2024-01-02T20:11:00Z</project.build.outputTimestamp>
   </properties>
 
 </project>
