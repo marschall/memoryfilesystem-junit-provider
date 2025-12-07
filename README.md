@@ -5,6 +5,9 @@ A memoryfilesystem based [@TempDir](https://junit.org/junit5/docs/current/api/or
 
 Only `Path` is supported, `File` can not be supported.
 
+- versions 2.x are for JUnit 6 and require Java 17
+- version 1.x are for Junit 5 and require Java 8
+
 Usage
 -----
 
@@ -12,7 +15,7 @@ Usage
 <dependency>
   <groupId>com.github.marschall</groupId>
   <artifactId>memoryfilesystem-junit-provider</artifactId>
-  <version>1.0.1</version>
+  <version>2.0.0</version>
   <scope>test</scope>
 </dependency>
 ```

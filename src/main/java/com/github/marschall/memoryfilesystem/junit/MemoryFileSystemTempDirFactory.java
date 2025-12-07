@@ -75,16 +75,12 @@ public final class MemoryFileSystemTempDirFactory implements TempDirFactory {
   }
 
   private static FileSystem buildFileSystemChecked(MemoryTempDirType.Type type) throws IOException {
-    switch (type) {
-      case LINUX:
-        return MemoryFileSystemBuilder.newLinux().build();
-      case MAC_OS:
-        return MemoryFileSystemBuilder.newMacOs().build();
-      case WINDOWS:
-        return MemoryFileSystemBuilder.newWindows().build();
-      default:
-        throw new IncompatibleClassChangeError("unknown enum value: " + type);
-    }
+    return switch (type) {
+      case LINUX -> MemoryFileSystemBuilder.newLinux().build();
+      case MAC_OS -> MemoryFileSystemBuilder.newMacOs().build();
+      case WINDOWS-> MemoryFileSystemBuilder.newWindows().build();
+      default -> throw new IncompatibleClassChangeError("unknown enum value: " + type);
+    };
   }
 
 }

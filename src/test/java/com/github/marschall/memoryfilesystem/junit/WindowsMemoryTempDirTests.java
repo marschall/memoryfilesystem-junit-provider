@@ -6,7 +6,6 @@ import java.nio.file.FileSystem;
 import java.nio.file.Path;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import org.junit.jupiter.api.Test;
@@ -29,7 +28,7 @@ class WindowsMemoryTempDirTests {
   }
 
   private static <T> List<T> toList(Iterable<T> i) {
-    return StreamSupport.stream(i.spliterator(), false).collect(Collectors.toList());
+    return StreamSupport.stream(i.spliterator(), false).toList();
   }
 
 }
