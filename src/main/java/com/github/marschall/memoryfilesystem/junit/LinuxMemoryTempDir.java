@@ -10,11 +10,14 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
+/**
+ * Meta-annotation, a {@link MemoryTempDir} with type Linux.
+ */
 @Documented
 @Retention(RUNTIME)
 @Target({FIELD, PARAMETER, ANNOTATION_TYPE})
 @MemoryTempDir
 @MemoryTempDirType(LINUX)
-@interface LinuxMemoryTempDir {
+public @interface LinuxMemoryTempDir {
 
 }

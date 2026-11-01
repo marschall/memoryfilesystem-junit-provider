@@ -10,11 +10,14 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
+/**
+ * Meta-annotation, a {@link MemoryTempDir} with type Windows.
+ */
 @Documented
 @Retention(RUNTIME)
 @Target({FIELD, PARAMETER, ANNOTATION_TYPE})
 @MemoryTempDir
 @MemoryTempDirType(WINDOWS)
-@interface WindowsMemoryTempDir {
+public @interface WindowsMemoryTempDir {
 
 }

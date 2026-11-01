@@ -14,11 +14,11 @@ import com.github.marschall.memoryfilesystem.MemoryFileSystemBuilder;
 @Documented
 @Retention(RUNTIME)
 @Target({FIELD, PARAMETER, ANNOTATION_TYPE})
-@interface MemoryTempDirType {
+public @interface MemoryTempDirType {
 
   Type value();
 
-  enum Type {
+  public enum Type {
 
     /**
      * Uses a Linux-type file system.
